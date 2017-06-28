@@ -1,4 +1,3 @@
-##DLCache
 
 ### Fast parallel object cache for iOS
 
