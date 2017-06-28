@@ -1,12 +1,12 @@
 
 ### Fast parallel object cache for iOS
 
-#Dependencies
+### Dependencies
 * DLFoundation 是一个功能性框架, 使用此框架能大量减少开发的时间成本
 * 详细介绍[DLFoundation]()
-#How To Use
+### How To Use
 
-* file
+# file
 ```markdown
 Objective-C:
 
@@ -30,7 +30,7 @@ Objective-C:
 
 -------
 
-* Memory
+# Memory
 ```markdown
 Objective-C:
 
@@ -48,7 +48,7 @@ Objective-C:
 ```
 -------
 
-* userDefaults
+# userDefaults
 ```markdown
 Objective-C:
 
@@ -67,7 +67,7 @@ Objective-C:
 ```
 -------
 
-* keychain
+# keychain
 ```markdown
 Objective-C:
 
@@ -86,7 +86,7 @@ Objective-C:
 ```
 
 For more details see [GitHub Flavored Markdown](https://github.com/LimingZou).
-###Communication
+### Communication
 * If you found a bug, open an issue.
 ### Jekyll Themes
 
@@ -96,7 +96,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
-###Contact us
+### Contact us
 * QQ: 402016082
 * Email: 402016082@qq.com
 
