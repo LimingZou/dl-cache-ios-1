@@ -1,24 +1,26 @@
 
 ### Fast parallel object cache for iOS
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#Usage
 
+1.file
 ```markdown
-Syntax highlighted code block
+//创建
+    _fileCache = [[DLFileCache alloc] init];
+    _fileCache.cachePath = [NSString stringWithFormat:@"%@/ImageCache", [DLSandbox libCachePath]];
+    _fileCache.cacheUser = @"user1";
+    
+//保存
+    [self saveData:[NSData dataFromResource:@"icon_moreOperation_shareYouTube@2x.png"] forURL:@"test1"];
+    
+//删除
+[self deleteImageForURL:@"test1"];
+    
+//获取
+UIImage *imgae = [self pathImage:@"test1"];
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+//缓存路径
+NSString *path = [self pathImageForURL:@"test1"];
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
@@ -30,3 +32,5 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
