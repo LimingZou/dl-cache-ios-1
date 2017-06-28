@@ -5,25 +5,76 @@
 
 1.file
 ```markdown
-//创建
+    /*创建*/
     _fileCache = [[DLFileCache alloc] init];
     _fileCache.cachePath = [NSString stringWithFormat:@"%@/ImageCache", [DLSandbox libCachePath]];
     _fileCache.cacheUser = @"user1";
     
-//保存
-    [self saveData:[NSData dataFromResource:@"icon_moreOperation_shareYouTube@2x.png"] forURL:@"test1"];
+    /*保存*/
+    [_fileCache setObject:[NSData dataFromResource:@"testImage.png"] forKey:@"test1"];
     
-//删除
-[self deleteImageForURL:@"test1"];
+    /*删除*/
+    [_fileCache removeObjectForKey:@"test1"];
     
-//获取
-UIImage *imgae = [self pathImage:@"test1"];
+    /*获取*/
+    NSData *imgaeData = [_fileCache objectForKey:@"test1"];
 
-//缓存路径
-NSString *path = [self pathImageForURL:@"test1"];
+    /*缓存路径*/
+    NSString *path = [_fileCache fileNameForKey:@"test1"];
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+-------
+
+2.Memory
+```markdown
+    /*创建*/
+    _memoryCache = [DLMemoryCache sharedInstance];
+    
+    /*保存*/
+    [_memoryCache setObject:@"memory-value" forKey:@"memory-key"];
+    
+    /*删除*/
+    [_memoryCache removeObjectForKey:@"memory-key"];
+
+    /*获取*/
+    [_memoryCache objectForKey:@"memory-key"];
+```
+-------
+
+3.userDefaults
+```markdown
+    /*创建*/
+    _userDefaults = [DLUserDefaults sharedInstance];
+    
+    /*保存*/
+    [_userDefaults userDefaultsWrite:@"userDefaults-value" forKey:@"userDefaults-key"];
+    
+    /*删除*/
+    [_userDefaults userDefaultsRemove:@"userDefaults-key"];
+    
+     /*获取*/
+    [_userDefaults userDefaultsRead:@"userDefaults-key"];
+
+```
+-------
+
+4.keychain
+```markdown
+    /*创建*/
+    _keyChain =  [DLKeychain sharedInstance];
+    _keyChain.defaultDomain = @"com.keychain.";
+    
+    /*保存*/
+    [_keyChain keychainWrite:@"keychain-value" forKey:@"keychain-key"];
+    
+    /*删除*/
+    [_keyChain keychainDelete:@"keychain-key"];
+    
+    /*获取*/
+    [_keyChain keychainRead:@"keychain-key"];
+```
+
+For more details see [GitHub Flavored Markdown](https://github.com/LimingZou).
 
 ### Jekyll Themes
 
