@@ -1,0 +1,6 @@
+framework module DLFoundation {
+  umbrella header "DLFoundation.h"
+
+  export *
+  module * { export * }
+}
