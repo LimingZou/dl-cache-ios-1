@@ -1,10 +1,15 @@
 
 ### Fast parallel object cache for iOS
 
-#Usage
+#Dependencies
+* DLFoundation 是一个功能性框架, 使用此框架能大量减少开发的时间成本
+* 详细介绍[DLFoundation]()
+#How To Use
 
-1.file
+* file
 ```markdown
+Objective-C:
+
     /*创建*/
     _fileCache = [[DLFileCache alloc] init];
     _fileCache.cachePath = [NSString stringWithFormat:@"%@/ImageCache", [DLSandbox libCachePath]];
@@ -25,8 +30,10 @@
 
 -------
 
-2.Memory
+* Memory
 ```markdown
+Objective-C:
+
     /*创建*/
     _memoryCache = [DLMemoryCache sharedInstance];
     
@@ -41,8 +48,10 @@
 ```
 -------
 
-3.userDefaults
+* userDefaults
 ```markdown
+Objective-C:
+
     /*创建*/
     _userDefaults = [DLUserDefaults sharedInstance];
     
@@ -58,8 +67,10 @@
 ```
 -------
 
-4.keychain
+* keychain
 ```markdown
+Objective-C:
+
     /*创建*/
     _keyChain =  [DLKeychain sharedInstance];
     _keyChain.defaultDomain = @"com.keychain.";
@@ -75,7 +86,8 @@
 ```
 
 For more details see [GitHub Flavored Markdown](https://github.com/LimingZou).
-
+###Communication
+* If you found a bug, open an issue.
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/LimingZou/dl-cache-ios-1/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
@@ -83,5 +95,9 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+###Contact us
+* QQ: 402016082
+* Email: 402016082@qq.com
 
 
